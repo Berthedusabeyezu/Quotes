@@ -28,7 +28,7 @@ export class QuoteComponent implements OnInit {
         
         if(toDelete){
             this.quotes.splice(index,1)
-        } 
+        }  
     } 
    
   } 
