@@ -5,29 +5,21 @@
           <div class="form-group">
 
               <label for="name">quote</label>
-              <input type="text"  class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
+              <input type="text"  class="form-control" id="name"  rows="4" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
               <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                <p> Name is Required</p>
-              </div>   
+              <p> Name is Required</p>
+            </div>   
             </div>
-          <div class="form-group">
+          
+            <div class="form-group">
 
               <label for="author">author</label>
-              <input type="text" required class="form-control" author="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+              <textarea class="form-control" id="author" [(ngModel)]="newQuote.author" name="author"#author="ngModel" required></textarea>
               <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-                <p> author is Required</p>
-              </div> 
-            </div> 
-          <div class="form-group">
-
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.desciption" name="desciption"#description="ngModel" required></textarea>
-            <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-              <p> Description is Required</p>
-              
-          </div>
-        </div>
-          <div class="form-group">
+              <p> Author is Required</p>
+              </div>
+           </div>
+           <div class="form-group">
               <label for="complete">Completion</label>
              
               <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required >

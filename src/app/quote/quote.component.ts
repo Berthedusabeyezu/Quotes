@@ -7,8 +7,9 @@ import{Quotes} from '../quotes'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  title="Quotes"
   quotes = [
-    new Quotes(1,'Independence is happiness', 'Susan B. Anthony', 0, 0,new Date(2018,5,14)),
+    new Quotes(1,'Independence is happiness', 'Susan B. Anthony', 0, 0, new Date(2018,5,14)),
     new Quotes(2,'Happiness can exist only in acceptance','George Orwell', 0, 0, new Date(2018,3,14) ),     
     new Quotes(3,'Love has no age, no limit; and no death', 'John Galsworthy', 0, 0 ,new Date(2018,8,9)),
     new Quotes(4,'You can not blame gravity for falling in love', 'Albert Einstein', 0, 0, new Date(2018,6,9)),

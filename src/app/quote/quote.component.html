@@ -1,26 +1,23 @@
 <div style="text-align:center">
   <h1>
-    Welcome to {{title}}!
+    Welcome to {{title}} App!
   </h1>
-
-  <img width="300" alt="Quotes" src=" https://www.brainyquote.com/photos_tr/en/s/susanbanthony/380664/susanbanthony1-2x.jpg">
 </div>
 
-<h1>Quotes</h1>
 <div class="container">
   <div clas = "row" *ngFor='let quotes of quotes; let i = index'>
-  <div class="row">
-    <h4> {{quotes.name}}  {{quotes.completeDate|date}}</h4>
-    <button class="btn btn-primary"  (click)='toogleDetails(i)'>Toogle Details</button>
-  </div>
+    <div class="row">
+      <h4> {{quotes.name}}  {{quotes.completeDate|date}}</h4>
+      <button class="btn btn-primary"  (click)='toogleDetails(i)'>Toogle Details</button>
+    </div>
     <!--<app-quote-details *ngIf="quotes.showDescription" [quotes]='quotes' (isComplete)= 'completeQuotes($event,i)'></app-quote-details>--> 
-    <div class="row" *ngIf="quotes.showDescription">
-    <app-quote-details  [quotes]='quotes' (isComplete)= 'deleteQuotes($event,i)'></app-quote-details>
+     <div class="row" *ngIf="quotes.showDescription">
+       <app-quote-details  [quotes]='quotes' (isComplete)= 'deleteQuotes($event,i)'></app-quote-details>
+     </div>
   </div>
-</div>
-<div class="row">
-  <app-quote-form (addQuote)="addNewQuotes($event)"></app-quote-form>
-</div>
+  <div class="row">
+    <app-quote-form (addQuote)="addNewQuotes($event)"></app-quote-form>
+  </div>
 </div>
 <router-outlet></router-outlet>
     
