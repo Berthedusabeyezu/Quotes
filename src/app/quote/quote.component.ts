@@ -30,7 +30,7 @@ export class QuoteComponent implements OnInit {
             this.quotes.splice(index,1)
         }  
     }   
-  } 
+  }   
   addNewQuotes(quote){
     let quoteLength = this.quotes.length;
     quote.id=quoteLength+1;
