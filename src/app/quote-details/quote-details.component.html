@@ -1,0 +1,13 @@
+
+<p>{{quotes.description}}</p>
+<button (click) = 'quotesComplete(true)'> Complete </button>
+<button (click) = 'quotesDelete(true)'> Delete Quotes </button>
+<p>This quotes will be completed in {{quotes.completeDate|dateCount}} days</p>
+<p>complete in {{quotes.completeDate|dateCount}} days</p>
+
+<button class="btn btn-danger" (click) = 'quotesDelete(true)'> Delete Quotes </button>
+<p>{{quotes.upvote}}</p>
+<button (click)="quotes.upvote = quotes.upvote + 1">Upvote</button>
+
+<button  (click)="quotes.downvote = quotes.downvote + 1">Downvote</button>
+<p>{{quotes.downvote}}</p>
